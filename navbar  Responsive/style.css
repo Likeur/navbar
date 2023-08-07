@@ -1,0 +1,104 @@
+@font-face {
+    font-family:'Poppins Medium' ;
+    src: url("./font/Poppins-Medium.ttf") format("truetype");
+}
+*{
+    font-family:'Poppins Medium' ;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    padding: 30px;
+    background-size: cover;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4vh;
+    padding: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(160, 16, 117, 0.082);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.123);
+    
+}
+.logo span{
+    color: rgb(160, 16, 117);
+}
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    transition: 300ms ease;
+}
+.menu a{
+    color: black;
+    margin: 10px;
+    font-size: 18px;
+}
+.menu a:hover{
+    color: rgb(160, 16, 117);
+    transition: 300ms;
+    
+}
+.menu ul{
+    display: flex;
+}
+.nomenu{
+    transform: translateY(0);
+    transition: 300ms ease;
+}
+button{
+    transform: scale(2);
+    margin-left: 20px;
+    margin-top: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width:900px){
+    body{
+        padding: 0px;
+    }
+    header{
+        
+        padding: 30px;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        height: 4vh;
+
+    }
+    .menu{
+        transform: translateY(-400px);
+        width: 100%;
+        background: rgba(160, 16, 117, 0.699);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        position: absolute;
+        margin-top: 70px;
+    }
+    .menu a{
+        color:white;
+        display: block;
+        margin-top: 10px;
+        font-size: 30px;
+    }
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nomenu{
+        transform: translateY(200px);
+        transition: 300ms ease;
+    }
+    button{
+        display: block;
+    }
+   
+}
